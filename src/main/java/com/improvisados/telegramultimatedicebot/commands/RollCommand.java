@@ -10,13 +10,9 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.improvisados.jdiceroller.JDiceRoller;
 import com.improvisados.telegramultimatedicebot.TelegramUltimateDiceBot;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.telegram.telegrambots.extensions.bots.commandbot.commands.IBotCommand;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.bots.AbsSender;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 /**
  *

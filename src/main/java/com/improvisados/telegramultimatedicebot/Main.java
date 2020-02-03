@@ -7,6 +7,7 @@ package com.improvisados.telegramultimatedicebot;
 
 import com.improvisados.telegramultimatedicebot.commands.FateRollCommand;
 import com.improvisados.telegramultimatedicebot.commands.RollCommand;
+import com.improvisados.telegramultimatedicebot.commands.RollStatsCommands;
 import com.improvisados.telegramultimatedicebot.configuration.Configuration;
 import java.io.FileNotFoundException;
 import java.net.Proxy;
@@ -52,6 +53,7 @@ public class Main {
             botsApi.registerBot(bot);
             bot.register(new RollCommand());
             bot.register(new FateRollCommand());
+            bot.register(new RollStatsCommands());
 
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
