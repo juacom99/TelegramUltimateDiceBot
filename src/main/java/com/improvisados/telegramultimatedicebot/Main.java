@@ -10,6 +10,7 @@ import com.improvisados.telegramultimatedicebot.commands.RollCommand;
 import com.improvisados.telegramultimatedicebot.commands.RollStatsCommands;
 import com.improvisados.telegramultimatedicebot.configuration.Configuration;
 import java.io.FileNotFoundException;
+import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -39,10 +40,11 @@ public class Main {
 
             if (cfg.getProxy() != null) {
                 Proxy proxy = cfg.getProxy();
+                InetSocketAddress addr=((InetSocketAddress)proxy.address());
 
                // Set up Http proxy
-               botOptions.setProxyHost("10.1.20.104");
-                botOptions.setProxyPort(8080);
+               botOptions.setProxyHost(addr.getHostString());
+                botOptions.setProxyPort(addr.getPort());
                 // Select proxy type: [HTTP|SOCKS4|SOCKS5] (default: NO_PROXY)
                 botOptions.setProxyType(DefaultBotOptions.ProxyType.HTTP);
             }
