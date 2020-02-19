@@ -35,7 +35,7 @@ public class RollStatsCommands implements IBotCommand {
 
     @Override
     public String getDescription() {
-        return "Roll stats for DnD";
+        return "Roll stats for D&D";
     }
 
     @Override
